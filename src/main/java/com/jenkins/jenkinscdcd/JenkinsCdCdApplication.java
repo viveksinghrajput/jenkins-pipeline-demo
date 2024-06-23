@@ -14,7 +14,13 @@ public class JenkinsCdCdApplication {
     public String greetings(@PathVariable String name) {
         //vivek kumar
         name= name.split(" ")[0];
+        mapOutput(name);
         return "Hello " + name + " Congratulations you have successfully completed Jenkins CI/CD demo !";
+    }
+
+    private void mapOutput(String name) {
+
+        System.out.println("Hello "+ name +" successfully completed");
     }
 
     public static void main(String[] args) {
